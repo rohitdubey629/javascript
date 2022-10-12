@@ -25,7 +25,7 @@
             </div>
 
             <div class="btn">
-                <input type="button" value="+" onclick="mul(this)" />
+                <input type="button" value="+" onclick="mul(this);" />
                 <input type="button" value="-" onclick="mul(this)" />
                 <input type="button" value="*" onclick="mul(this)" />
                 <input type="button" value="/" onclick="mul(this)" />
@@ -36,19 +36,61 @@
     </center>
 </body>
 <script>
-    function mul(val) {
+    function mul(element) {
+        let val = element.value;
+        console.log(val);
         let inputVal1 = document.getElementById("t1").value;
         let inputVal2 = document.getElementById("t2").value;
 
+        //using if else
 
         if (val == '+') {
-            result.value = parseInt(inputVal1.value) + parseInt(inputVal2.value);
-            console.log("hiiii");
+            result.value = parseInt(inputVal1) + parseInt(inputVal2);
+        } else if (val == '-') {
+            result.value = parseInt(inputVal1) - parseInt(inputVal2);
+        } else if (val == '*') {
+            result.value = parseInt(inputVal1) * parseInt(inputVal2);
+        } else if (val == '/') {
+            result.value = parseInt(inputVal1) / parseInt(inputVal2);
+        } else if (val == 'clr') {
+            result.value = "";
+            t1.value = "";
+            t2.value = "";
         }
-        console.log("hello");
-        console.log(val);
-        console.log(inputVal1);
+
+        // cheking code
+
+        // console.log("hello");
+        // console.log(val);
+        // console.log(inputVal1);
+        // console.log(inputVal2);
+        // result = parseInt(inputVal1) + parseInt(inputVal2);
+
+        // console.log(result);
         // result.value = parseInt(inputVal1.value) + parseInt(inputVal2.value);
+
+
+        //switch case
+
+        switch (val) {
+            case '+':
+                result.value = parseInt(inputVal1) + parseInt(inputVal2);
+                break;
+            case '-':
+                result.value = parseInt(inputVal1) - parseInt(inputVal2);
+                break;
+            case '*':
+                result.value = parseInt(inputVal1) * parseInt(inputVal2);
+                break;
+            case '/':
+                result.value = parseInt(inputVal1) / parseInt(inputVal2);
+                break;
+            case 'clr':
+                result.value = "";
+                t1.value = "";
+                t2.value = "";
+                break;
+        }
 
     }
 </script>
