@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bgcolor change by js</title>
+    <style>
+        tr td {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table height="100" width="500">
+            <tr>
+                <td bgcolor="red" onclick="setcolor(this)">Red</td>
+                <td bgcolor="magenta" onclick="setcolor(this)">magenta</td>
+                <td bgcolor="violet" onclick="setcolor(this)">Violet</td>
+                <td bgcolor="Cyan" onclick="setcolor(this)">Cyan</td>
+                <td bgcolor="orange" onclick="setcolor(this)">Orange</td>
+            </tr>
+            <tr>
+                <td bgcolor="green" onclick="setcolor(this)">Green</td>
+                <td bgcolor="coral" onmouseover="setcolor(this)">Coral</td>
+                <td bgcolor="teal" onmouseover="setcolor(this)">Teal</td>
+                <td bgcolor="navy" onmouseover="setcolor(this)">Navy</td>
+                <td bgcolor="pink" onclick="setcolor(this)">Pink</td>
+            </tr>
+            <tr>
+                <td bgcolor="blue" onclick="setcolor(this)">Blue</td>
+                <td bgcolor="brown" onclick="setcolor(this)">Brown</td>
+                <td bgcolor="peach" onclick="setcolor(this)">Peach</td>
+                <td bgcolor="gray" onclick="setcolor(this)">Gray</td>
+                <td bgcolor="black" onclick="setcolor(this)">Black</td>
+            </tr>
+        </table>
+    </center>
+</body>
+<script>
+    function setcolor(obg) {
+        document.bgColor = obg.bgColor;
+        // document.style.font = red;
+
+    }
+</script>
+
+</html>
